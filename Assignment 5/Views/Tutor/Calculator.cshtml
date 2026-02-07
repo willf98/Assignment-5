@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Pricing Calculator";
+}
+
+<h1>Ski Buddy Pricing Calculator</h1>
+<p>Enter how many hours you want me to ski with you, and I’ll calculate the total.</p>
+
+<div>
+    <label for="hours">Hours</label>
+    <input type="number" id="hours" min="0" />
+    <span id="hoursError" style="color:red; display:none; margin-left:10px;"></span>
+</div>
+
+<div style="margin-top:10px;">
+    <label for="rate">Rate ($/hour)</label>
+    <input type="text" id="rate" value="40" readonly />
+</div>
+
+<div style="margin-top:10px;">
+    <button id="calcBtn" type="button">Calculate Total</button>
+</div>
+
+<div style="margin-top:10px;">
+    <label for="total">Total ($)</label>
+    <input type="text" id="total" readonly />
+</div>
+
+<hr />
+
+<a asp-controller="Home" asp-action="Index">Back to Home</a>
+
+@section Scripts {
+    <script src="~/js/skiBuddyCalculator.js"></script>
+}
